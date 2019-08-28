@@ -1,0 +1,146 @@
+@import "config";
+@import "menu";
+@import "mobile";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background-color: #050505;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+}
+
+//Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+
+  &.lg-heading {
+    font-size: 7rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    // margin-top: 2rem;
+    padding: 0.2rem 1rem;
+  }
+}
+
+span {
+  &.text-secondaryImg {
+    background-image: $secondaryImg;
+    background-size: 100% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+// .text-secondaryImg {
+// }
+
+#bio-text{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 125%;
+  margin-top: 50px;
+  line-height: 50px;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .icons {
+    margin-top: 1rem;
+    text-align: center;
+
+    a {
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 3600px;
+
+      &:hover {
+        color: $secondary-color;
+        color: lightgoldenrodyellow;
+        text-shadow: 1px 1px 3px #edcc12;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 10vh;
+    }
+  }
+}
+
+#main-footer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 2.5rem; 
+  text-align: center;
+}
+
+
+//About page footer line
+/*
+If you change "#line {transform: rotate(0deg);}", then you'll need to adjust: "#line:after {top: ---; left: ---;}". Usually just changing one or both down or up a number will fix rotation stacing problems.
+To some degree, changing "border-radius: 50px 0px 0px 0px;" to something like "border-radius: 50px 0px 0px 0px;" will act like "transform: rotate();".
+Do NOT change "#line:after {transform: rotate(180deg);}". Doing so will mess everything up.
+
+If any of the lines marked with an "x" are changed, you'll need to change all, or most, of the ones marked with an "x"
+*/
+
+#special {position: relative; /*can be "relative" or "absolute". doesn't really matter.*/
+  width: 0px;
+  height: 0px;
+  left: -50px;
+  /*x*/ transform: rotate(25deg);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+#special:after, #special:before {position: absolute;
+                      content: "";
+                      /*x*/ width: 55px; /*if this is changed, then don't forget to change "left" in ":after".*/
+                      /*x*/ height: 50px; /*x*/
+                      /*x*/ border-radius: 50px 0px 0px 0px; /*only have a value on the first set.*/
+                      /*x*/ border-top: 12px solid #fff;}
+
+#special:before {/*just if you want to customize the first half of the shape.*/}
+
+#special:after {/*x*/ top: -50px;
+        /*x*/ left: 50px;
+        transform: rotate(180deg); /*don't even think about changing this.*/}
