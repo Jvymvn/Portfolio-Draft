@@ -148,7 +148,7 @@ main {
 }
 
 
-//About page footer line
+//About Page Footer Line
 /*
 If you change "#line {transform: rotate(0deg);}", then you'll need to adjust: "#line:after {top: ---; left: ---;}". Usually just changing one or both down or up a number will fix rotation stacing problems.
 To some degree, changing "border-radius: 50px 0px 0px 0px;" to something like "border-radius: 50px 0px 0px 0px;" will act like "transform: rotate();".
