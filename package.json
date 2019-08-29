@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio Website",
   "main": "index.js",
-  "homepage": "https://thinkful-ei-emu.github.io/Portfolio-Jordon",
+  "homepage": "https://Jvymvn.github.io/Portfolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
@@ -11,7 +11,7 @@
   "author": "Jordon Carter",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.1.1",
     "jquery": "^3.4.1",
     "node-sass": "^4.12.0"
   }

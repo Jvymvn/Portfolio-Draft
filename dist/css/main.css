@@ -222,6 +222,34 @@ main {
   height: 2.5rem;
   text-align: center; }
 
+.projects-info {
+  display: grid;
+  grid-gap: 30px;
+  text-align: center;
+  grid-template-areas: 'project1 project2 project3';
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: scroll;
+  position: relative;
+  border: 2px solid #edcc12;
+  border-radius: 10px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 6vh;
+  padding-left: 10px; }
+
+.project1 {
+  grid-area: project1; }
+
+.project2 {
+  grid-area: project2; }
+
+.project3 {
+  grid-area: project3; }
+
+.project {
+  border-bottom: #edcc12 5px solid; }
+
 /*
 If you change "#line {transform: rotate(0deg);}", then you'll need to adjust: "#line:after {top: ---; left: ---;}". Usually just changing one or both down or up a number will fix rotation stacing problems.
 To some degree, changing "border-radius: 50px 0px 0px 0px;" to something like "border-radius: 50px 0px 0px 0px;" will act like "transform: rotate();".

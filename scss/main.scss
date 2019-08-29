@@ -112,6 +112,41 @@ main {
   text-align: center;
 }
 
+.projects-info {
+  display: grid;
+  grid-gap: 30px;
+  text-align: center;
+  grid-template-areas:
+  'project1 project2 project3';
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: scroll;
+  position: relative;
+  border: 2px solid #edcc12;
+  border-radius: 10px;
+  width: 550px;
+  // left: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  top: 6vh;
+  padding-left: 10px;
+}
+
+.project1{
+  grid-area: project1
+}
+
+.project2{
+  grid-area: project2
+}
+
+.project3{
+  grid-area: project3
+}
+
+.project{
+  border-bottom: $secondary-color 5px solid;
+}
+
 
 //About page footer line
 /*
